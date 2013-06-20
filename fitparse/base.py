@@ -70,7 +70,7 @@ class FitFile(object):
                         hook_func(record)
         except FitParseComplete:
             pass
-        except Exception, e:
+        except Exception as e:
             self._file.close()
             raise FitParseError("Unexpected exception while parsing (%s: %s)" % (
                 e.__class__.__name__, e,
