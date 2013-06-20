@@ -15,6 +15,7 @@ DATA = open(FILENAME, 'rb').read()
 
 
 class FitFileTestCase(unittest.TestCase):
+    maxDiff = None
     def test_fitfile_extractor(self):
         out = extract_from_fit(StringIO(DATA))
 
